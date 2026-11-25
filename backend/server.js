@@ -10,8 +10,8 @@ app.use(cors());
 app.use(express.json());
 
 // Student routes
-const studentRoutes = require("./routes/studentRoutes");
-app.use("/api/students", studentRoutes);
+const studentRoute = require("./routes/studentRoute");
+app.use("/api/students", studentRoute);
 
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI)
